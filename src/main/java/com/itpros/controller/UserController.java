@@ -18,6 +18,7 @@ public class UserController {
 	@RequestMapping(value="byId", method=RequestMethod.GET)
 	public User findUser(Integer id){
 		//return userService.findUser(id);
+		System.out.println("git test");
 		return new User("Gayathri","Malempati",1);
 	}
 	
