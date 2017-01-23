@@ -1,13 +1,12 @@
 package com.itpros.repository;
 
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import com.itpros.entity.User;
 @Repository
-public class UserDAO {
+public interface UserDAO extends CrudRepository<User, Integer>{
 	
-	public User findUser(int id){
-		return null;
-	}
-
+	public User findByFirstName(String firstName);
+	
 }

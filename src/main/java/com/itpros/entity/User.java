@@ -1,17 +1,28 @@
 package com.itpros.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity(name="user_info")
 public class User {
-	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int userId;
 	private String firstName;
 	private String lastName;
-	private int userId;
+	
+	public User(){
+		
+	}
 	
 	
-	public User(String firstName, String lastName, int userId) {
+	public User(String firstName, String lastName) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.userId = userId;
+		
 	}
 	
 	public String getFirstName() {

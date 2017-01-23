@@ -11,6 +11,16 @@ public class UserService {
 	private UserDAO userDao;
 
 	public User findUser(int userId){
-		return userDao.findUser(userId);
+		return userDao.findOne(userId);
+		
 	}
+	
+	public User saveUser(User user){
+		return userDao.save(user);
+		
+	}
+	
+	public User findUserByName(String fname){
+		return userDao.findByFirstName(fname);
+		}
 }
